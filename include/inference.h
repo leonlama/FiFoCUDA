@@ -1,0 +1,1 @@
+// CUDA inference function declarations
