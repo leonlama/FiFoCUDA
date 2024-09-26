@@ -18,13 +18,13 @@ int main() {
     const int height = 244;
     const int width = 244;
 
-    // Allocate and initialize input tensor
+    // Allocate and initialize input tensor in GPU VRAM
     float* inputTensor = allocateInputTensor(channels, height, width, batchSize);
 
     // Run inference
     runInference(context, inputTensor, batchSize);
 
-    // Clean up and free resources
+    // Clean up GPU memory and free resources
     freeInputTensor(inputTensor);
     context->destroy();
 
